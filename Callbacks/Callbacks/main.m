@@ -28,10 +28,18 @@ int main(int argc, const char * argv[]) {
         BNRLogger *logger = [[BNRLogger alloc] init];
 
         // observe notifications for NSSystemTimeZoneDidChangeNotification
-        [[NSNotificationCenter defaultCenter] addObserver:logger
-                                                 selector:@selector(zoneChange:)
-                                                     name:NSSystemTimeZoneDidChangeNotification
-                                                   object:nil];
+//        [[NSNotificationCenter defaultCenter] addObserver:logger
+//                                                 selector:@selector(zoneChange:)
+//                                                     name:NSSystemTimeZoneDidChangeNotification
+//                                                   object:nil];
+
+        [[NSNotificationCenter defaultCenter] addObserverForName:NSSystemTimeZoneDidChangeNotification
+                                                          object:nil
+                                                           queue:nil
+                                                      usingBlock:^(NSNotification * _Nonnull note) {
+                                                                        NSLog(@"Time zone changed.");
+                                                                    }
+         ];
         // nsurl
         NSURL *url = [NSURL URLWithString:@"http://www.gutenberg.org/cache/epub/205/pg205.txt"];
         // nsurlrequest
