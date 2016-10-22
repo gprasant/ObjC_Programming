@@ -68,11 +68,11 @@
 			children = (
 				12F644531DAC215900304853 /* main.m */,
 				12F6445A1DAC222900304853 /* BNRAppliance.h */,
+				12F6445B1DAC222900304853 /* BNRAppliance.m */,
 				1261B0AE1DB18B510033D666 /* BNROwnedAppliance.h */,
 				1261B0AF1DB18B510033D666 /* BNROwnedAppliance.m */,
 				1261B0B11DB18DE60033D666 /* BNRWallSafe.h */,
 				1261B0B21DB18DE60033D666 /* BNRWallSafe.m */,
-				12F6445B1DAC222900304853 /* BNRAppliance.m */,
 			);
 			path = Appliances;
 			sourceTree = "<group>";

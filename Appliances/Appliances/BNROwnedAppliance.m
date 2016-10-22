@@ -11,9 +11,14 @@
 {
     NSMutableSet *_owners;
 }
+
+@property (nonatomic) NSString *purchaseDate;
 @end
 
 @implementation BNROwnedAppliance
+
+// @synthesize is required if both getter and setter methods are implemented.
+@synthesize purchaseDate = _purchaseDate;
 
 - (instancetype) initWithProductName:(NSString *)pn {
     return [self initWithProductName:pn firstOwner:nil];
@@ -39,5 +44,13 @@
 
 - (NSSet *) owners {
     return [_owners copy];
+}
+
+- (NSString *)purchaseDate {
+    return _purchaseDate;
+}
+
+- (void) setPurchaseDate:(NSString *)p {
+    _purchaseDate = [p copy];
 }
 @end
